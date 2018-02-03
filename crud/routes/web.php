@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@home');
+Route::post('/search', 'HomeController@search');
+Route::get('/jobs', 'JobsController@index');
+Route::get('/add', 'JobsController@add');
+Route::post('/add', 'JobsController@store');
